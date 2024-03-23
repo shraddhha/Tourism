@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Mate!!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Travel Mate!!</h1>
+        <div id="datetime"></div>
+    </header>
+
+    <input type="text" id="searchBar" placeholder="Search for a place...">
+
+    <nav>
+        <ul>
+            <li><a href="#delhi">Delhi</a></li>
+            <li><a href="#mumbai">Mumbai</a></li>
+            <li><a href="#goa">Goa</a></li>
+            <li><a href="#rajasthan">Rajasthan</a></li>
+            <li><a href="#himachal">Himachal Pradesh</a></li>
+            <!-- Add more places as needed -->
+            <li><a href="#">Hospitals Nearby</a></li>
+            <li><a href="#">Hotels Nearby</a></li>
+            <li><a href="#">Book a Cab</a></li>
+            <li><a href="#">Profile <img src="profile-icon.png" alt="Profile"></a></li>
+            <li><a href="#">Chatbox</a></li>
+        </ul>
+    </nav>
+
+    <main>
+
+        <!-- Add this button/icon in the datetimeSelection div -->
+        <div id="datetimeSelection">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time">
+
+            <button id="mapSelector">Select Map</button>
+
+        </div>
+
+        <section id="selectCity">
+            <h2>Select a City</h2>
+            <select id="citySelect">
+                <option value="delhi">Delhi</option>
+                <option value="mumbai">Mumbai</option>
+                <option value="goa">Goa</option>
+                <option value="rajasthan">Rajasthan</option>
+                <option value="himachal">Himachal Pradesh</option>
+            </select>
+        </section>
+
+        <section id="tripPlan">
+            <h2>AI Trip Plan based on your budget</h2>
+            <button></button>
+            <!-- AI trip plan content goes here -->
+        </section>
+
+        <section class="budget-slider">
+            <h2>Budget Slider</h2>
+            <input type="range" id="budgetRange" min="0" max="1000" value="500">
+            <p>Budget: $<span id="budgetValue">500</span></p>
+        </section>
+
+        <section class="chatbox">
+            <h2>Chat with our Tourist AI Assistant</h2>
+            <div class="conversation"></div>
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </section>
+
+        <!-- Sections for places -->
+        <section id="delhi" class="place">
+            <h2>Delhi</h2>
+            <img src="delhi.jpg" alt="Delhi">
+            <p>Description: Delhi, the capital of India, is known for its rich history and diverse culture. It is home to iconic landmarks such as the Red Fort, India Gate, and Qutub Minar.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="delhiMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places Near Delhi</h3>
+                <ul>
+                    <li>Red Fort</li>
+                    <li>Qutub Minar</li>
+                    <li>Humayun's Tomb</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="mumbai" class="place">
+            <h2>Mumbai</h2>
+            <img src="mumbai.jpg" alt="Mumbai">
+            <p>Description: Mumbai, the financial capital of India, is a bustling metropolis known for its vibrant nightlife, Bollywood film industry, and iconic landmarks such as the Gateway of India and Marine Drive.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="mumbaiMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places Near Mumbai</h3>
+                <ul>
+                    <li>Gateway of India</li>
+                    <li>Marine Drive</li>
+                    <li>Elephanta Caves</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="pune" class="place">
+            <h2>Pune</h2>
+            <img src="pune.jpg" alt="Pune">
+            <p>Description: Tourists visiting Pune can explore its rich history, vibrant culture, and modern attractions, including historical landmarks like Aga Khan Palace and Shaniwar Wada, as well as enjoying its pleasant weather, bustling street markets,
+                and delicious cuisine.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="puneMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places in Pune</h3>
+                <ul>
+                    <li>Sinhagad Fort</li>
+                    <li>Dagdusheth Temple</li>
+                    <li>Shaniwar Wada</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="goa" class="place">
+            <h2>Goa</h2>
+            <img src="goa.jpg" alt="Goa">
+            <p>Description: Goa, known for its stunning beaches, vibrant nightlife, and Portuguese heritage, is a popular tourist destination in India. Visitors flock to Goa for its relaxed vibe and water sports activities.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="goaMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places Near Goa</h3>
+                <ul>
+                    <li>Palolem Beach</li>
+                    <li>Old Goa</li>
+                    <li>Dudhsagar Waterfalls</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="rajasthan" class="place">
+            <h2>Rajasthan</h2>
+            <img src="rajasthan.jpg" alt="Rajasthan">
+            <p>Description: Rajasthan, the "Land of Kings," is renowned for its majestic forts, palaces, and vibrant culture. Experience the royal heritage of Rajasthan by visiting cities like Jaipur, Udaipur, and Jodhpur.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="rajasthanMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places in Rajasthan</h3>
+                <ul>
+                    <li>Jaipur</li>
+                    <li>Udaipur</li>
+                    <li>Jaisalmer</li>
+
+                </ul>
+            </div>
+        </section>
+
+        <section id="himachal" class="place">
+            <h2>Himachal Pradesh</h2>
+            <img src="himachal.jpg" alt="Himachal Pradesh">
+            <p>Description: Himachal Pradesh, nestled in the Himalayas, is known for its breathtaking landscapes, serene hill stations, and adventure activities. Explore destinations like Shimla, Manali, and Dharamshala for a rejuvenating experience.</p>
+            <button class="hotel">Book Hotel</button>
+            <button class="cab">Book Cab</button>
+            <div class="map" id="himachalMap"></div>
+            <div class="famous-places">
+                <h3>Famous Places in Himachal Pradesh</h3>
+                <ul>
+                    <li>Shimla</li>
+                    <li>Manali</li>
+                    <li>Kullu and manikaran</li>
+
+                </ul>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="chatbox">
+            <h2>Chat with our Tourist AI Assistant</h2>
+            <div class="conversation"></div>
+            <input type="text" id="userInput" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+
+        <p>&copy; 2024 SolutionsHorizon. All rights reserved.</p>
+    </footer>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

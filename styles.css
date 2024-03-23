@@ -1,0 +1,191 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+section {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    display: block;
+}
+
+section h2 {
+    color: #333;
+}
+
+section img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+aside {
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 300px;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#mapSelector {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#mapSelector:hover {
+    background-color: #0056b3;
+}
+
+.chatbox {
+    margin-top: 20px;
+    padding-left: 30px;
+}
+
+.chatbox h2 {
+    margin-bottom: 10px;
+}
+
+.chatbox input[type="text"],
+.chatbox button {
+    width: 60%;
+    height: 20%;
+    display: block;
+    margin: 10px 0;
+}
+
+.chatbox .conversation {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-sizing: border-box;
+}
+
+
+/* Images for cities/places */
+
+#delhi img {
+    background-image: url('delhi.jpg');
+}
+
+#mumbai img {
+    background-image: url('mumbai.jpg');
+}
+
+#pune img {
+    background-image: url('pune.jpg');
+}
+
+#goa img {
+    background-image: url('goa.jpg');
+}
+
+#rajasthan img {
+    background-image: url('rajasthan.jpg');
+}
+
+#himachal img {
+    background-image: url('himachal.jpg');
+}
+
+
+/* Icon for profile */
+
+nav ul li:nth-last-child(2) img {
+    width: 20px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+
+/* Budget*/
+
+.budget-slider {
+    margin-top: 20px;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.budget-slider input[type="range"] {
+    width: 80%;
+    margin-top: 10px;
+    justify-content: center;
+}
+
+.budget-slider p {
+    margin-top: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+}
